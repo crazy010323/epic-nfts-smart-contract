@@ -15,6 +15,8 @@ import { Base64 } from "./libraries/Base64.sol";
 // to the inherited contract's methods.
 contract MyEpicNFT is ERC721URIStorage {
     
+    mapping (address => uint) private mintedNFTs;
+
     // Magic given to us by OpenZeppelin to help us keep track of tokenIds.
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
@@ -60,6 +62,9 @@ contract MyEpicNFT is ERC721URIStorage {
 
     // A function our user will hit to get their NFT.
     function makeAnEpicNFT() public {
+
+        require(mintedNFTs[msg.sender] < 50, "Up to 50 nfts can be minted!!!");
+
         // Get the current tokenId, this starts at 0.
         uint256 newItemId = _tokenIds.current();
 
@@ -108,5 +113,11 @@ contract MyEpicNFT is ERC721URIStorage {
         emit newEpicNftMinted(msg.sender, newItemId);
         // Increment the counter for when the next NFT is minted.
         _tokenIds.increment();
+
+        mintedNFTs[msg.sender] ++;
+    }
+
+    function getTotalNFTsMintedSoFar(address owner) public view returns(uint) {
+        return mintedNFTs[owner];
     }
 }
