@@ -1,6 +1,7 @@
-# Basic Sample Hardhat Project
+# On-Chain NFT Minting Project with HardHat
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This smart contract allows users to mint NFTs not to IPFS, but On-Chain NFTs.
+Also provides a test js code for testing/auditing/deploying.
 
 Try running some of the following tasks:
 
