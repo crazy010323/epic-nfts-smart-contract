@@ -1,6 +1,6 @@
 # On-Chain NFT Minting Project with HardHat
 
-This smart contract allows users to mint NFTs not to IPFS, but On-Chain NFTs.
+This smart contract allows users to mint a collection of NFTs.
 Also provides a test js code for testing/auditing/deploying.
 
 Try running some of the following tasks:
