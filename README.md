@@ -1,4 +1,4 @@
-# On-Chain NFT Minting Project with HardHat
+# DApps ( On-Chain NFT Minting Project with HardHat )
 
 This smart contract allows users to mint a collection of NFTs.
 Also provides a test js code for testing/auditing/deploying.
